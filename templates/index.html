@@ -193,62 +193,51 @@
     <section class="section section-lg bg-gray-200" id="event-details">
       <div class="container">
         <h2 class="text-dark wow fadeInUp" data-wow-delay=".5s">פרטי הסדנה</h2>
-        <section class="section section-lg bg-gray-200" id="event-details">
-          <div class="container">
-            <h2 class="text-dark wow fadeInUp" data-wow-delay=".5s">פרטי הסדנה</h2>
-            <div class="row">
-              <div class="col-md-4">
-                <div class="event-detail wow fadeInUp" data-wow-delay=".6s">
-                  <div class="event-icon">
-                    <i class="fas fa-calendar-alt"></i>
-                  </div>
-                  <div class="event-info">
-                    <h4>תאריך</h4>
-                    <p>July 25, 2024</p> 
-                  </div>
-                </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="event-detail wow fadeInUp" data-wow-delay=".6s">
+              <div class="event-icon">
+                <i class="fas fa-calendar-alt"></i>
               </div>
-              <div class="col-md-4">
-                <div class="event-detail wow fadeInUp" data-wow-delay=".7s">
-                  <div class="event-icon">
-                    <i class="fas fa-clock"></i>
-                  </div>
-                  <div class="event-info">
-                    <h4>שעה</h4>
-                    <p>10:30</p> 
-                  </div>
-                </div>
+              <div class="event-info">
+                <h4>תאריך</h4>
+                <p>July 25, 2024</p> 
               </div>
-              <div class="col-md-4">
-                <div class="event-detail wow fadeInUp" data-wow-delay=".8s">
-                  <div class="event-icon">
-                    <i class="fas fa-video"></i> <!-- Changed from map marker to video icon for Zoom -->
-                  </div>
-                  <div class="event-info">
-                    <h4>Zoom</h4>
-                      <i class="fas fa-link"></i> <!-- Link icon for Zoom -->
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="event-detail wow fadeInUp" data-wow-delay=".9s">
-                  <div class="event-icon">
-                    <i class="fas fa-coins"></i>
-                  </div>
-                  <div class="event-info">
-                    <h4>עלות</h4>
-                    <p>549₪</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="event-details-text mt-4">
-              <p>*פרטים נוספים ישלחו לנרשמים לסדנה*</p>
             </div>
           </div>
-        </section>
-        
+          <div class="col-md-4">
+            <div class="event-detail wow fadeInUp" data-wow-delay=".7s">
+              <div class="event-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="event-info">
+                <h4>שעה</h4>
+                <p>10:30</p> 
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="event-detail wow fadeInUp" data-wow-delay=".8s">
+              <div class="event-icon">
+                <i class="fas fa-video"></i> 
+              </div>
+              <div class="event-info">
+                <h4>Zoom</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="event-detail wow fadeInUp" data-wow-delay=".9s">
+              <div class="event-icon">
+                <i class="fas fa-coins"></i>
+              </div>
+              <div class="event-info">
+                <h4>עלות</h4>
+                <p>549₪</p>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="block-sm">
         <a class="button button-primary button-shadow wow fadeInRight" data-wow-delay=".7s" href="#">לנרשמים עד תאריךxxxx <br>439₪ בלבד</a>
         </div>
@@ -268,17 +257,24 @@
     <section class="section section-lg bg-white" id="contacts" dir="rtl">
       <div class="container">
         <h2 class="text-dark wow fadeInUp" data-wow-delay=".5s">צור קשר</h2>
-        <form class="contact-form wow fadeInUp" data-wow-delay=".6s" method="post" action="/send-message">
+        <form class="contact-form wow fadeInUp" data-wow-delay=".6s" method="post" action="/send_mail">
           <div class="form-group">
-            <label for="name">שם</label>
+            <label for="name">שם מלא<span className="text-rose-500">*</span></label>
             <input type="text" class="form-control" id="name" name="name" placeholder="שם מלא" required>
           </div>
+
           <div class="form-group">
-            <label for="email">דוא"ל</label>
+            <label for="email">כתובת מייל<span className="text-rose-500">*</span></label>
             <input type="email" class="form-control" id="email" name="email" placeholder="כתובת מייל" required>
           </div>
+
           <div class="form-group">
-            <label for="message">הודעה</label>
+            <label for="phone">טלפון<span className="text-rose-500">*</span></label>
+            <input type="text" class="form-control" id="phone" name="phone" placeholder="טלפון" maxlength="10" minlength="10" required>
+          </div>
+
+          <div class="form-group">
+            <label for="message">הודעה<span className="text-rose-500">*</span></label>
             <textarea class="form-control" id="message" name="message" rows="5" placeholder="כתוב את הודעתך כאן" required></textarea>
           </div>
           <button type="submit" class="btn btn-primary">שלח</button>

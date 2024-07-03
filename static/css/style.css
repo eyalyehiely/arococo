@@ -5941,3 +5941,45 @@ html.rd-navbar-fixed-linked header {
   }
   
 
+  .event-detail {
+	display: flex;
+	align-items: center;
+	padding: 15px;
+	background: #ffffff;
+	border-radius: 5px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	margin-bottom: 15px;
+  }
+  
+  .event-icon {
+	font-size: 24px;
+	color: #007bff;
+	margin-right: 15px;
+  }
+  
+  .event-info h4 {
+	margin: 0;
+	font-size: 16px;
+	font-weight: 500;
+  }
+  
+  .event-info p {
+	margin: 5px 0 0;
+	color: #555;
+  }
+  
+  .event-map-link {
+	display: flex;
+	align-items: center;
+	color: #007bff;
+	text-decoration: none;
+  }
+  
+  .event-map-link:hover {
+	text-decoration: underline;
+  }
+  
+  .event-map-link i {
+	margin-right: 5px;
+  }
+  
