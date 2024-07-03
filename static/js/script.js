@@ -411,7 +411,7 @@
 
 						if (navbarSearch) {
 							navbarSearch.val('').trigger('propertychange');
-							navbarSearch.trigger('blur');
+							navbarSearch.trigger('blur'); 
 						}
 
 					}
