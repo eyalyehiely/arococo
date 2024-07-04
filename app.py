@@ -8,8 +8,8 @@ app = Flask(__name__)
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'alona@a-rococo.com'
-app.config['MAIL_PASSWORD'] = 'ealm iwla hxih sgfm'
+app.config['MAIL_USERNAME'] = 'designar40@gmail.com'
+app.config['MAIL_PASSWORD'] = 'lalv jnco szjo ryjp'
 
 mail = Mail(app)
 
@@ -25,12 +25,13 @@ def send_email():
         name = request.form.get('name')
         email = request.form.get('email')
         message = request.form.get('message')
+        phone = request.form.get('phone')
 
     #create email message
         msg = Message(subject=f" קיבלת הודעה חדשה מ:  {name}",
-                      sender=('portfolio', 'alona@a-rococo.com'),
-                      recipients=["alona@a-rococo.com"])
-        msg.body = f"Message from: {email}\n\n{message}"
+                      sender=('course', 'designar40@gmail.com'),
+                      recipients=["designar40@gmail.com"])
+        msg.body = f"Message from: {email}\n\n Phone number:{phone}\n\n{message}"
 
         # send email
         mail.send(msg)
