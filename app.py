@@ -31,7 +31,7 @@ def send_email():
         msg = Message(subject=f" קיבלת הודעה חדשה מ:  {name}",
                       sender=('course', 'designar40@gmail.com'),
                       recipients=["designar40@gmail.com"])
-        msg.body = f"Message from: {email}\n\n Phone number:{phone}\n\n{message}"
+        msg.body = f"Message from: {email}\n\n Phone number: {phone}\n\n Message: {message}"
 
         # send email
         mail.send(msg)
